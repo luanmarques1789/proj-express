@@ -1,5 +1,5 @@
 const user = (req, res) => {
-	res.sendStatus('USER');
+	res.send('USERRRR');
 };
 
 const about = (req, res) => {
@@ -13,7 +13,7 @@ const calc = (req, res) => {
 		const { num1, num2 } = req.query;
 		const sum = parseInt(num1) + parseInt(num2);
 		// O parâmetro da função send() somente aceita string
-		res.send(`O resultado é ${sum}`);
+		res.render(`calc`, { sum });
 	} else {
 		res.send('calculadora');
 	}
@@ -33,8 +33,18 @@ const pair = (req, res) => {
 	}
 };
 
-const def = (req, res) => {
-	res.send('default');
+const home = (req, res) => {
+	res.render('home', {
+		locale: new Date().toLocaleDateString('pt-BR'),
+		time: new Date().toLocaleTimeString('pt-BR'),
+	});
+};
+
+const time = (req, res) => {
+	res.render('home', {
+		locale: new Date().toLocaleDateString('pt-BR'),
+		time: new Date().toLocaleTimeString('pt-BR'),
+	});
 };
 
 module.exports = {
@@ -42,5 +52,5 @@ module.exports = {
 	about,
 	calc,
 	pair,
-	def,
+	home,
 };

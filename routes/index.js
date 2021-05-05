@@ -1,5 +1,5 @@
 const express = require('express');
-const { calc, pair, about, user, def } = require('../controllers');
+const { calc, pair, about, user, home } = require('../controllers');
 const router = express.Router();
 
 // Rotas são caminhos que o usuário pode utilizar na aplicação WEB
@@ -12,6 +12,6 @@ router.get('/calc', calc);
 // Passagem de parâmetros via URL
 router.get('/pair/:num', pair);
 
-router.get('/', def);
+router.get('/', home);
 
 module.exports = router;
