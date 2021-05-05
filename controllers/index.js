@@ -1,5 +1,5 @@
 const user = (req, res) => {
-	res.send('USERRRR');
+	res.send('USER');
 };
 
 const about = (req, res) => {
