@@ -1,7 +1,5 @@
 # PROJ-EXPRESS
 
-## ABOUT
-
 ## DEPENDENCIES
 
-THIS PROJECT INCLUDE PACKAGES EXPRESS AND EJS
+This project includes the packages express and ejs
